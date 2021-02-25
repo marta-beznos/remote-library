@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Librarian", "Librarian\Librarian.csproj", "{6423511E-46BD-4330-BD6E-E8E95F57E301}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reader", "Reader\Reader.csproj", "{D3E0A5DB-EA4D-426D-8E43-0119CF972CEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Courier", "Courier\Courier.csproj", "{804D8471-D4E8-4CE2-8149-0B85BAE6D46C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6423511E-46BD-4330-BD6E-E8E95F57E301}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6423511E-46BD-4330-BD6E-E8E95F57E301}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6423511E-46BD-4330-BD6E-E8E95F57E301}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6423511E-46BD-4330-BD6E-E8E95F57E301}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3E0A5DB-EA4D-426D-8E43-0119CF972CEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3E0A5DB-EA4D-426D-8E43-0119CF972CEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3E0A5DB-EA4D-426D-8E43-0119CF972CEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3E0A5DB-EA4D-426D-8E43-0119CF972CEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{804D8471-D4E8-4CE2-8149-0B85BAE6D46C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{804D8471-D4E8-4CE2-8149-0B85BAE6D46C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{804D8471-D4E8-4CE2-8149-0B85BAE6D46C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{804D8471-D4E8-4CE2-8149-0B85BAE6D46C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {909CDD1E-96A7-468F-B0A2-3469B2DEC1F0}
+	EndGlobalSection
+EndGlobal
