@@ -1,0 +1,45 @@
+﻿using Microsoft.Azure.ServiceBus;
+using Microsoft.Azure.ServiceBus.Core;
+using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Librarian
+{
+    public class DeliveryOrderTopicSender
+    {
+        private readonly IMessageSender sender;
+
+        public DeliveryOrderTopicSender()
+        {
+            sender = new MessageSender(new ServiceBusConnection("Endpoint=sb://mentorshipspace.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=2o/+2f18Gq4XBXTtYv4ZAZyt2ldPwqoBqS3u69xZeEk="), "delivery_order");
+        }
+
+        public async Task SendMessageToTopicAsync<T>(T messageBody, int direction)
+        {
+            var bytes = GetMessageBytes(messageBody);
+            var message = new Message(bytes)
+            {
+                Label = "DemoLable",
+                MessageId = Guid.NewGuid().ToString(),
+                UserProperties = { new KeyValuePair<string, object>("direction", direction) }
+            };
+            await sender.SendAsync(message);
+        }
+
+        public byte[] GetMessageBytes(object message)
+        {
+            if (message == null)
+            {
+                throw new NullReferenceException("Message body cannot be null");
+            }
+
+            var serializedObject = JsonConvert.SerializeObject(message);
+            var bytes = Encoding.UTF8.GetBytes(serializedObject);
+            return bytes;
+        }
+
+    }
+}
